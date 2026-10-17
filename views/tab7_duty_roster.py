@@ -69,7 +69,11 @@ def render_tab7(selected_township):
     m1.metric("Total On-Duty Engineers", len(df_roster))
     m2.metric(
         "Active Field Personnel",
-        sum(1 for r in roster if "In Field" in r["Status"] or "On Site" in r["Status"]),
+        sum(
+            1
+            for r in roster
+            if "In Field" in r["Status"] or "On Site" in r["Status"]
+        ),
     )
     m3.metric("Current Shift Window", "Morning Shift (07:00 - 15:00)")
 
@@ -80,14 +84,17 @@ def render_tab7(selected_township):
     cols = st.columns(len(roster))
     for idx, staff in enumerate(roster):
       with cols[idx]:
-        st.markdown(f"""
-                <div style="background-color:#f8f9fa; padding:12px; border-radius:8px; border-top:4px solid #1E88E5;">
-                    <b>{staff['Name']}</b><br>
-                    <small>{staff['Role']}</small><br>
-                    📍 <code>{staff['Assigned Zone']}</code><br>
-                    📞 <b>{staff['Contact']}</b><br>
-                    <span>{staff['Status']}</span>
+        st.markdown(
+            f"""
+                <div style="background-color:#ffffff; color:#111827; padding:16px; border-radius:10px; border-top:4px solid #1E88E5; border:1px solid #e5e7eb; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin-bottom:10px;">
+                    <div style="font-size:16px; font-weight:700; color:#111827; margin-bottom:2px;">{staff['Name']}</div>
+                    <div style="font-size:13px; color:#4b5563; font-weight:500; margin-bottom:8px;">{staff['Role']}</div>
+                    <div style="font-size:13px; color:#1f2937; margin-bottom:6px;">📍 <span style="background-color:#f3f4f6; color:#1f2937; padding:2px 6px; border-radius:4px; font-family:monospace; font-size:12px; border:1px solid #e5e7eb;">{staff['Assigned Zone']}</span></div>
+                    <div style="font-size:13px; color:#111827; margin-bottom:6px;">📞 <b>{staff['Contact']}</b></div>
+                    <div style="font-size:13px; color:#111827; font-weight:600;">{staff['Status']}</div>
                 </div>
-                """, unsafe_allow_html=True)
+                """,
+            unsafe_allow_html=True,
+        )
   else:
     st.info("No personnel currently assigned to this township sector.")

@@ -65,9 +65,16 @@ def render_tab1(
     st.metric("Total Spatial Inflow", f"{total_hourly_runoff_m3:,.1f} m³/h")
 
     for z_name in township_data["zones"].keys():
-      st.markdown(f"""
-            <div class="zone-card">
-                <b>{z_name.split(' (')[0]}</b><br>
-                🌧️ Rain: <code>{zone_rain_inputs[z_name]} mm/h</code> | 🌱 Soil: <code>{zone_soil_inputs[z_name]}% VWC</code>
+      st.markdown(
+          f"""
+            <div style="background-color:#ffffff; color:#111827; padding:12px 14px; border-radius:8px; border-left:4px solid #1E88E5; border:1px solid #e5e7eb; box-shadow:0 1px 3px rgba(0,0,0,0.05); margin-bottom:10px;">
+                <div style="font-size:15px; font-weight:700; color:#111827; margin-bottom:6px;">{z_name.split(' (')[0]}</div>
+                <div style="font-size:13px; color:#374151; font-weight:500;">
+                    🌧️ Rain: <span style="background-color:#f3f4f6; color:#111827; padding:2px 8px; border-radius:4px; font-family:monospace; font-size:12px; border:1px solid #d1d5db; font-weight:700;">{zone_rain_inputs[z_name]} mm/h</span>
+                    &nbsp;|&nbsp;
+                    🌱 Soil: <span style="background-color:#f3f4f6; color:#111827; padding:2px 8px; border-radius:4px; font-family:monospace; font-size:12px; border:1px solid #d1d5db; font-weight:700;">{zone_soil_inputs[z_name]}% VWC</span>
+                </div>
             </div>
-            """, unsafe_allow_html=True)
+            """,
+          unsafe_allow_html=True,
+      )
