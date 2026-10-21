@@ -168,15 +168,32 @@ with tab2:
       status_mode,
   )
 
+# Construct forecast payload for Tab 3
+ml_forecast_data = {
+    "risk_curve": [
+        ml_peak_level,
+        min(100.0, ml_peak_level * 0.95),
+        min(100.0, ml_peak_level * 0.85),
+        min(100.0, ml_peak_level * 0.70),
+        min(100.0, ml_peak_level * 0.50),
+        30.0,
+        20.0,
+        15.0,
+    ],
+    "rain_curve": (
+        forecast_precip[:8]
+        if forecast_precip
+        else [0, 2, 8, 25, 32, 18, 5, 1]
+    ),
+}
+
 with tab3:
   render_tab3(
-      ml_peak_level,
-      ml_risk_class,
-      ml_confidence,
-      ml_risk_color,
-      forecast_times,
-      forecast_precip,
+      selected_township,
+      township_data,
       pond_level,
+      avg_soil_moisture,
+      ml_forecast_data,
   )
 
 with tab4:
