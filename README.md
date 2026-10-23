@@ -106,15 +106,16 @@ HydroResilience/
 ├── requirements.txt        # Python package dependencies
 ├── services/
 │   ├── ml_engine.py        # XGBoost prediction model pipeline
-│   └── weather_api.py     # Open-Meteo API integration layer
+│   ├── weather_api.py     # Open-Meteo API integration layer
+│   └── pdf_generator.py     # PDF export feature
 └── views/
     ├── tab1_gis.py          # Executive GIS mapping command center
     ├── tab2_telemetry_3d.py # 3D retention basin & actuator matrix
     ├── tab3_weather_ml.py   # Micro-climate ML risk forecast & stress test
     ├── tab4_roi_pdf.py      # ESG financial audit & PDF report generator
     ├── tab5_citizen_alerts.py # Resident incident portal & field alerts
-    ├── tab6_ai_assistant.py # Context-aware Hydro-AI Copilot
-    └── tab7_duty_roster.py  # On-duty operational personnel roster
+    ├── tab6_duty_roster.py # On-duty operational personnel roster
+    └── tab7_ai_assistant.py # Context-aware Hydro-AI Copilot 
 
 ```
 
@@ -181,6 +182,4 @@ To run HydroResilience on a public demo display monitor:
 
 3. Use the **Quick Suggestion Pills** in **Tab 6 (Hydro-AI Operator)** or the **What-If Cloudburst Slider** in **Tab 3** to demonstrate real-time dynamic recalculations.
 
-## 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
