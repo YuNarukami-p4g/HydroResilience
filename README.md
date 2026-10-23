@@ -117,8 +117,14 @@ HydroResilience/
     ├── tab6_ai_assistant.py # Context-aware Hydro-AI Copilot 
     └── tab7_duty_roster.py # On-duty operational personnel roster
 ```
+## 📺 Public Demo 
 
-## 💻 Installation & Setup
+To run HydroResilience on a public demo display monitor:
+
+1. Launch the application in Streamlit using the hyperlink here https://hydroresilience-j3dknakhaxrffnx9ddg97q.streamlit.app/
+
+
+## 💻 Installation & Setup for Local
 
 ### Prerequisites
 
@@ -170,15 +176,5 @@ HydroResilience/
 
 5. **Access the Application**:
    Open your browser and navigate to `http://localhost:8501`.
-
-## 📺 Public Demo & Kiosk Mode Instructions
-
-To run HydroResilience on a public demo display monitor:
-
-1. Launch the application in Streamlit.
-
-2. Press **F11** in Google Chrome or Microsoft Edge to enter full-screen kiosk mode.
-
-3. Use the **Quick Suggestion Pills** in **Tab 6 (Hydro-AI Operator)** or the **What-If Cloudburst Slider** in **Tab 3** to demonstrate real-time dynamic recalculations.
 
 
