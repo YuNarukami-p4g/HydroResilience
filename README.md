@@ -1,8 +1,9 @@
 # 🌊 HydroResilience: IoT-Driven Urban Stormwater Management & Flood Mitigation Engine
 
-**HydroResilience** is an enterprise-grade IoT telemetry platform and predictive AI flood-risk management system designed for sustainable urban developments, such as the City of Elmina and other master-planned townships under Sime Darby Property.
+**HydroResilience** is an enterprise-grade IoT telemetry platform and predictive AI integrated flood-risk and retention pond management system designed for sustainable urban developments, such as the City of Elmina and other master-planned townships under Sime Darby Property.
 
 The system integrates real-time spatial weather APIs, sub-zone soil volumetric water content (VWC) sensors, civil-engineered 3D retention basin modeling, XGBoost machine learning risk forecasting, automated pre-discharge gate actuation, and board-ready ESG financial audit reporting.
+
 
 ## 🚀 Key Modules & Capabilities
 
