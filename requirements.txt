@@ -1,0 +1,27 @@
+# Core Framework & UI
+streamlit>=1.32.0
+
+# Data Science & Numerical Processing
+numpy>=1.26.0
+pandas>=2.2.0
+
+# Interactive Data Visualization & 3D Rendering
+plotly>=5.19.0
+
+# GIS Mapping & Spatial Analysis
+folium>=0.16.0
+streamlit-folium>=0.18.0
+
+# Machine Learning & Predictive Risk Pipeline
+xgboost>=2.0.3
+scikit-learn>=1.4.0
+
+# Live Weather Telemetry API Requests
+requests>=2.31.0
+
+# PDF Report Generation & Image Processing
+fpdf2>=2.7.8
+Pillow>=10.2.0
+
+# Utility & Demo Tooling (QR Codes)
+qrcode[pil]>=7.4.2
