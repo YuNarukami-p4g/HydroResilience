@@ -49,11 +49,11 @@ The system integrates real-time spatial weather APIs, sub-zone soil volumetric w
 
 * **WhatsApp Emergency Dispatch**: One-click clipboard generator formatted for instant field technician dispatch via WhatsApp / CallMeBot API.
 
-### 6. 👷 On-Duty Personnel Roster (`tab6_duty_roster.py`)
+### 6. 👷 On-Duty Personnel Roster (`tab7_duty_roster.py`)
 
 * **Shift Rotation Tracking**: Displays active site engineers, hydrologists, and emergency contact details for rapid incident escalation.
 
-### 7. 🤖 Context-Aware Hydro-AI Operator Copilot (`tab7_ai_assistant.py`)
+### 7. 🤖 Context-Aware Hydro-AI Operator Copilot (`tab6_ai_assistant.py`)
 
 * **Domain-Specific Intelligence**: Heuristic AI trained on catchment telemetry, actuator control logic, MSMA engineering rules, and financial ROI metrics.
 
@@ -114,9 +114,8 @@ HydroResilience/
     ├── tab3_weather_ml.py   # Micro-climate ML risk forecast & stress test
     ├── tab4_roi_pdf.py      # ESG financial audit & PDF report generator
     ├── tab5_citizen_alerts.py # Resident incident portal & field alerts
-    ├── tab6_duty_roster.py # On-duty operational personnel roster
-    └── tab7_ai_assistant.py # Context-aware Hydro-AI Copilot 
-
+    ├── tab6_ai_assistant.py # Context-aware Hydro-AI Copilot 
+    └── tab7_duty_roster.py # On-duty operational personnel roster
 ```
 
 ## 💻 Installation & Setup
